@@ -8,11 +8,12 @@
 
 void print_alphabet(void)
 {
-	char c;
+	char a;
 
-	for (c = 'a', c <= 'z'; c++)
+	while (a != 'z')
 	{
-		_putchar(c);
+		_puthcar(a);
+
+		c++;
 	}
-	_putchar('\n');
 }
