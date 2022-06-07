@@ -11,7 +11,9 @@ int main(void)
 {
 	char name[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 
-	for (int c = 0; c <= 8; c++)
+	int c;
+
+	for (c = 0; c <= 8; c++)
 	{
 		_putchar(name[c]);
 	}
