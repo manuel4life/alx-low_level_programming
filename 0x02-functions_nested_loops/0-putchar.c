@@ -9,14 +9,14 @@
 
 int main(void)
 {
-	char name[5] = {'k', 'o', 'f', 'i'};
+	char name[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int i;
 
 
-	for (i = 0; i <= 5; i++)
+	for (i = 0; i <= 8; i++)
 	{
 		_putchar(name[i]);
-		_putchar(' ');
 	}
+	_putchar('\n');
 	return (0);
 }
