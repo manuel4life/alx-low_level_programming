@@ -16,8 +16,7 @@ int main(void)
 	for (c = 0; c <= 8; c++)
 	{
 		_putchar(name[c]);
-		_putchar('\n');
 	}
-	
+	_putchar('\n');
 	return (0);
 }
