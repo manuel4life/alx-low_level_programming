@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char name[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	char name[] = "_putchar" :
 
 	int c;
 
