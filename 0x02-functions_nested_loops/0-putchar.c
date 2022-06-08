@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char name[] = "_putchar" :
+	char name[] = "_putchar" ;
 
 	int c;
 
