@@ -11,10 +11,10 @@ int main(void)
 {
 		char name[] = "_putchar";
 
-		unsigned int i;
+		 int i;
 
 
-		for (i = 0; i < sizeof(name); i++)
+		for (i = 0; str[i] != '\0'; i++)
 		{
 
 		_putchar(name[i]);
