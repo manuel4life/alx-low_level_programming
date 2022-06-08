@@ -9,14 +9,19 @@
 
 int main(void)
 {
-	char name[] = "_putchar" ;
+		char name[] = "_putchar";
 
-	int c;
+		unsigned int i;
 
-	for (c = 0; c <= 8; c++)
-	{
-		_putchar(name[c]);
-	}
-	_putchar('\n');
-	return (0);
+
+		for (i = 0; i < sizeof(name); i++)
+		{
+
+		_putchar(name[i]);
+
+		}
+
+		_putchar('\n');
+
+		return (0);
 }
