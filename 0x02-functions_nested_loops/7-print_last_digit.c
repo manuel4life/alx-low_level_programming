@@ -7,4 +7,14 @@
 
 int print_last_digit(int lst)
 {
+	int i;
 
+	i = (lst % 10);
+
+	if (i < 0)
+	{
+		i = (-1 * i);
+	}
+	_puchar(i + '0');
+	return (i);
+}
