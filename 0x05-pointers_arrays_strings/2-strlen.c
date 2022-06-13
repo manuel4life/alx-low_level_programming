@@ -6,7 +6,7 @@
  * Return: 0 Always
  */
 
-nt _strlen(char *s)
+int _strlen(char *s)
 {
 	int k = 0;
 
