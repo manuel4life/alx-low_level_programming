@@ -6,11 +6,11 @@
  * Return: Always 0
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *n)
 {
 	int k;
 
-	for (i = 0; n[k] != '\0'; k++)
+	for (k = 0; n[k] != '\0'; k++)
 	{
 		if (n[k] >= 'a' && n[k] <= 'z')
 			n[k] = n[k] - 32;
