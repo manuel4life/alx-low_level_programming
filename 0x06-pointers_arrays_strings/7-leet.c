@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _leet - a function that encodes
+ * leet - a function that encodes
  * @n: string
  * Return: Always 0
  */
 
-char _leet(char *n)
+char *leet(char *n)
 {
 	int k;
 	int j;
