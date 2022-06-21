@@ -7,7 +7,7 @@
  * Return: Always 0
  */
 
-oid print_diagsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int i;
 	int tl = 0;
