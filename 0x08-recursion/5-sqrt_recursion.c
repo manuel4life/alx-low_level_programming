@@ -1,5 +1,5 @@
 #include "main.h"
-int perfectSquare(int n, int j);
+int perfectSquare(int n, int i);
 /**
  * _sqrt_recursion - a function that returns a natural
  * square root of a number
@@ -16,17 +16,18 @@ int _sqrt_recursion(int n)
 }
 /**
  * perfectSquare - checks for perfect Square
- * @k: input
- * @j: counter input
+ * @n: input
+ * @i: counter input
  * Return: square root
  */
 
-int perfectSquare(int n, int j)
+int perfectSquare(int n, int i)
 {
-	if (j < 1)
+	if (i < 1)
 		return (-1);
-	else if (j * j == n)
-		return (j);
+	else if (i * i == n)
+
+		return (i);
 	else
-		return (perfectSquare(n, j - 1));
+		return (perfectSquare(n, i - 1));
 }
