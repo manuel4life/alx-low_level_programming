@@ -1,33 +1,29 @@
 #include "main.h"
-int perfectSquare(int n, int i);
+int perfectSquare(int k, int j);
 /**
- * _sqrt_recursion - a function that returns a natural
- * square root of a number
- * @n: integer input
- * Return: square
+ * _sqrt_recursion - a function that checks the squareroot
+ * @n: input
+ * Return: Always 0
  */
-
 int _sqrt_recursion(int n)
 {
 		if (n < 0)
 			return (-1);
-	else
-		return (perfectSquare(n, (n + 1) / 2));
+		else
+			return (perfectSquare(n, (n + 1) / 2));
 }
 /**
- * perfectSquare - checks for perfect Square
- * @n: input
- * @i: counter input
+ * perfectSquare - function to check the perfect square
+ * @k: input
+ * @j: input
  * Return: square root
  */
-
-int perfectSquare(int n, int i)
+int perfectSquare(int k, int j)
 {
-		if (i < 1)
+		if (j < 1)
 			return (-1);
-	else if (i * i == n)
-
-		return (i);
-	else
-		return (perfectSquare(n, i - 1));
+		else if (j * j == k)
+			return (j);
+		else
+			return (perfectSquare(k, j - 1));
 }
