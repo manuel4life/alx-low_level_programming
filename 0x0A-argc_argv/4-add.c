@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - function that adds two numbers
  * @argc: counter
@@ -7,40 +8,22 @@
  * Return: Always 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv)
 {
 	int i = 1, sum = 0;
 
-	if (argc > 1)
+	if (argc < 1)
+		return (0);
+
+	for (i = 1; i < argc; i++)
 	{
-		for (; i < argc; i++)
+		if (!atoi(argv[i]))
 		{
-			if (checker(argv[i]))
-				sum += atoi(argv[i]);
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error");
+			return (1);
 		}
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
-}
-
-/**
- * checker - checks if it's letter
- * @c: chartacter input
- * Return: 0 if found in range 1 if not
- */
-
-int checker(char *c)
-{
-	while (*c)
-	{
-		if ((*c >= 65 && *c <= 90 || (*c >= 97 && *c <= 122))
-				return (0);
-				c++;
-	}
-	return (1);
 }
