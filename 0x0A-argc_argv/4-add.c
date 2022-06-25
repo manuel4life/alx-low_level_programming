@@ -27,3 +27,20 @@ int main(int argc, char **argv)
 	printf("%d\n", sum);
 	return (0);
 }
+
+/**
+ * checker - checks if it's letter
+ * @c: chartacter input
+ * Return: 0 if found in range 1 if not
+ */
+
+int checker(char *c)
+{
+	while (*c)
+	{
+		if ((*c >= 65 && *c <= 90 || (*c >= 97 && *c <= 122))
+				return (0);
+				c++;
+	}
+	return (1);
+}
