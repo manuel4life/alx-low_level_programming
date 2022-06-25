@@ -14,13 +14,13 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 
 	if (argc == 3)
 	{
-		product = (atoi(argv[i]) * atoi(argv[2]));
-		printf("%d\n", product);
+	product = (atoi(argv[1]) * atoi(argv[2]));
+	printf("%d\n", product);
 	}
 	else
 	{
-		prtinf("Error\n");
-		return (1);
+	printf("Error\n");
+	return (1);
 	}
 	return (0);
 }
