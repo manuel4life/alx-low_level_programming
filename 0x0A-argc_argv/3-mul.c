@@ -7,20 +7,19 @@
  * Return: Always 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	int i, val = 1;
+	int product;
 
-	if (argc != 3)
+	if (argc == 3)
 	{
-		printf("Error\n");
+		product = (atoi(argv[i]) * atoi(argv[2]));
+		printf("%d\n", product);
+	}
+	else
+	{
+		prtinf("Error\n");
 		return (1);
 	}
-
-	for (i = 1; i < argc; i++)
-	{
-		val *= atoi(argv[i]);
-	}
-	printf("%d\n", val);
 	return (0);
 }
