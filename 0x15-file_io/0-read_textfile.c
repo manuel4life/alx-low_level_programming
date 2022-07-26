@@ -6,39 +6,38 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to POSIX
- * @filename: file desciptor
- * @letters: size
- * Return: 0
+ * read_textfile - reads a text file and prints it to POSIX stdout.
+ *@letters: number of bytes
+ *@filename: file descriptor
+ *
+ * Return: letters;
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file, rd, wr;
-	char *buf;
+int fd, size, output;
+char *rd;
 
-	if (filename == NULL)
-		return (0);
+rd = (char *)malloc(sizeof(char) * letters);
 
-	file = open(filename, O_RDONLY);
+/*opening file*/
 
-	if (file == -1)
-		return (0);
+fd = open(filename, O_RDONLY);
 
-	buf = malloc(sizeof(char) * letters + 1);
-	if (buf == NULL)
-		return (0);
-
-	rd = read(file, buf, letters);
-	if (rd == -1)
-		return (0);
-
-	buf[letters] = '\0';
-
-	wr = write(1, buf, rd);
-	if (wr == -1)
-		return (0);
-
-	close(file);
-	free(buf);
-	return (wr);
+if (fd == -1 || filename == NULL || rd == NULL)
+{
+free(rd);
+return (0);
+}
+/*read file*/
+size = read(fd, rd, letters);
+if (size == -1)
+{
+return (0);
+}
+rd[size] = '\0';
+/*write to out*/
+output = write(STDOUT_FILENO, rd, size);
+close(fd);
+return (output);
 }
