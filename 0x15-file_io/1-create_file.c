@@ -1,34 +1,49 @@
 #include "main.h"
+
 /**
- * create_file - A function that creates a file
- * @filename: file descriptor
- * @text_content: null terminated string to write
- * Return: 1
+ * create_file - appends text at the end of a file.
+ * @filename: file descripter
+ * @text_content: count
+ *
+ * Return: int
  */
+
 int create_file(const char *filename, char *text_content)
 {
-	int file, i = 0;
+	int fd, oz;
 
-	if (filename == NULL)
+	fd = open(filename, O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0600);
+	if ((filename == NULL) || (fd == -1))
+	{
 		return (-1);
-
-	file = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
-	if (file == -1)
-		return (-1);
-
-	while (text_content[i])
-		i++;
-
+	}
 	if (text_content == NULL)
 	{
-		close(file);
+		close(fd);
+		return (1);
+	}
+	oz = write(fd, text_content, _strlen(text_content));
+	if (oz == -1)
 		return (-1);
-	}
-	else
-	{
-		write(file, text_content, i);
-	}
-
-	close(file);
+	close(fd);
 	return (1);
+}
+
+/**
+ * _strlen - return the length of a string
+ * @s: string to be checked
+ *
+ * Return: lenght of string
+ */
+
+int _strlen(char *s)
+{
+	int var;
+	int output = 0;
+
+	for (var = 0; s[var] != '\0'; var++)
+	{
+		output += 1;
+	}
+	return (output);
 }
