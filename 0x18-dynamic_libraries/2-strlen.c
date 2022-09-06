@@ -5,7 +5,13 @@
  * @s: input stringeturn.
  * Return: length of a string.
  */
+
 int _strlen(char *s)
 {
-return (0);
+int len = 0;
+
+while (*s++)
+len++;
+
+return (len);
 }

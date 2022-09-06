@@ -1,15 +1,21 @@
 #include "main.h"
-#include <stdlib.h>
+
 /**
- * _isalpha - checks for characters
- * @c: character to check
- * Return: int (0 if not alpha, 1 if alpha))
+ * _isalpha - function that will check for letters in upper or lowercase
+ * @c: letter input
+ * Return: 1
  */
+
 int _isalpha(int c)
 {
-	if (isalpha(c))
-	{
-		return (1);
-	}
-	return (0);
+if (c >= 'a' && c <= 'z')
+{
+return (1);
+}
+else if (c >= 'A' && c <= 'Z')
+{
+return (1);
+}
+else
+return (0);
 }
